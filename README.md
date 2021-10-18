@@ -18,7 +18,7 @@ Building this template will result in two step packages being produced:
 
 Any step packages built from this template will be compatible with Octopus Server v2021.3 and newer.
 
-To learn more about step packages, consult the [step package documentation](https://github.com/OctopusDeploy/step-api/blob/main/docs/StepPackages.md)
+To learn more about step packages, consult the [step package documentation](https://github.com/OctopusDeploy/step-api/blob/main/docs/StepPackages.md).
 
 ## Project structure
 
