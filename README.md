@@ -18,7 +18,15 @@ Building this template will result in two step packages being produced:
 
 Any step packages built from this template will be compatible with Octopus Server v2021.3 and newer.
 
+> Note: You don't have to use the template, but if you don't you will need to set everything up manually, and currently we have no guide on how to do this.
+
 To learn more about step packages, consult the [step package documentation](https://github.com/OctopusDeploy/step-api/blob/main/docs/StepPackages.md).
+
+## How to use this template
+
+1. Click the "Use this template" button above to create a new GitHub repository using this template.
+2. Clone the repository to your machine.
+3. Use the steps listed in the *Building the step package* section below to build and deploy the step package.
 
 ## Project structure
 
@@ -30,6 +38,8 @@ Step package repositories use a _monorepo_ structure, which supports:
 A single step package repository is modelled on a volatility boundary - it groups together a set of steps and targets we reasonably expect to change together.
 
 We strongly recommend the use of [PNPM workspaces](https://pnpm.io/workspaces) and [Changesets](https://github.com/atlassian/changesets) for package, build, and release management within the monorepo. This template pre-configures these tools for you.
+
+> Note: You will need PNPM to be installed globally on you machine [see docs here](https://pnpm.io/installation)
 
 The preferred directory structure for a step package mono-repo is shown below:
 
