@@ -26,7 +26,9 @@ To learn more about step packages, consult the [step package documentation](http
 
 1. Click the "Use this template" button above to create a new GitHub repository using this template.
 2. Clone the repository to your machine.
-3. Use the steps listed in the *Building the step package* section below to build and deploy the step package.
+3. Use the steps listed in the [Building the step package](#building-the-step-package) section below to build and deploy the step package locally.
+4. Follow the instructions in the [Releasing the step package](#releasing-the-step-package) section below to build and release the step package via GitHub Actions.
+5. Update `renovate-config.js` to point to your newly created repository. See [Dependency Management](#dependency-management) for more information.
 
 ## Project structure
 
@@ -233,3 +235,15 @@ The step is available when building a deployment project:
 Here is the result of a deployment with the new step package:
 
 ![](execution.png)
+
+## Dependency Management
+
+This repository uses [Renovate](https://docs.renovatebot.com/) to automate the process of keeping its dependencies up to date.
+
+Renovate is configured to:
+
+- Run once an hour
+- Ensure all dependency updates have associated PRs
+- Ensure all PRs checks are green before any auto merging can occur
+- Auto-merge digest and patch bumps, test libraries, linters, and type packages
+- Rebase when the PR is conflicting with its base
