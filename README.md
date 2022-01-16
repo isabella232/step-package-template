@@ -220,7 +220,12 @@ Once your PR is merged, the build will use the [Changesets Github Action](https:
 
 Upon merging the _Version Packages_ PR, the repository will be tagged with the new version, and a Github Release will be created for each changed step package.
 
-**Note:** for the time being, to access the newly-versioned package, you will need to retrieve it from the build artifacts produced after the `Version Packages` PR is merged. In the future, this will be published somewhere central.
+To access the newly-versioned package, you can retrieve it from the build artifacts produced after the `Version Packages` PR is merged.
+
+To publish the newly-versioned package to a step package feed, you will need to configure those secrets in GitHub Actions:
+
+- `STEP_PACKAGE_FEED_URL`: the public URL of the feed.
+- `STEP_PACKAGE_FEED_API_KEY`: the Master API Key of the feed.
 
 ## Using the step package
 
