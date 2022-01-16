@@ -80,7 +80,7 @@ jobs:
 
       - uses: changesets/action@master
         with:
-          publish: pnpm run ci:publish
+          publish: pnpm run ci:publish -- -- --packagePath ./dist/* --feedUrl ${{ secrets.STEP_PACKAGE_FEED_URL }} --apiKey ${{ secrets.STEP_PACKAGE_FEED_API_KEY }} --ignoreExistingPackageErrors
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
