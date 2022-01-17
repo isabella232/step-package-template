@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@changesets/cli': 2.18.1
+      '@octopusdeploy/step-package-cli': 1.2.4
       '@types/node': 14.18.5
       '@typescript-eslint/eslint-plugin': 4.33.0
       '@typescript-eslint/parser': 4.33.0
@@ -21,6 +22,7 @@ importers:
       tslib: 2.3.1
     devDependencies:
       '@changesets/cli': 2.18.1
+      '@octopusdeploy/step-package-cli': 1.2.4
       '@types/node': 14.18.5
       '@typescript-eslint/eslint-plugin': 4.33.0_3289a875d95a672b97ebf589745c66ef
       '@typescript-eslint/parser': 4.33.0_eslint@7.32.0+typescript@4.5.4
@@ -37,7 +39,7 @@ importers:
     specifiers:
       '@changesets/cli': 2.18.1
       '@octopusdeploy/step-api': 1.1.6
-      '@octopusdeploy/step-package-cli': 1.1.1
+      '@octopusdeploy/step-package-cli': 1.2.4
       '@types/jest': 26.0.24
       '@types/node': 14.18.5
       '@typescript-eslint/eslint-plugin': 4.33.0
@@ -64,7 +66,7 @@ importers:
     devDependencies:
       '@changesets/cli': 2.18.1
       '@octopusdeploy/step-api': 1.1.6
-      '@octopusdeploy/step-package-cli': 1.1.1
+      '@octopusdeploy/step-package-cli': 1.2.4
       '@types/jest': 26.0.24
       '@types/node': 14.18.5
       '@typescript-eslint/eslint-plugin': 4.33.0_3289a875d95a672b97ebf589745c66ef
@@ -88,7 +90,7 @@ importers:
     specifiers:
       '@changesets/cli': 2.18.1
       '@octopusdeploy/step-api': 1.1.6
-      '@octopusdeploy/step-package-cli': 1.1.1
+      '@octopusdeploy/step-package-cli': 1.2.4
       '@types/jest': 26.0.24
       '@types/node': 14.18.5
       '@typescript-eslint/eslint-plugin': 4.33.0
@@ -113,7 +115,7 @@ importers:
     devDependencies:
       '@changesets/cli': 2.18.1
       '@octopusdeploy/step-api': 1.1.6
-      '@octopusdeploy/step-package-cli': 1.1.1
+      '@octopusdeploy/step-package-cli': 1.2.4
       '@types/jest': 26.0.24
       '@types/node': 14.18.5
       '@typescript-eslint/eslint-plugin': 4.33.0_3289a875d95a672b97ebf589745c66ef
@@ -1801,8 +1803,8 @@ packages:
       '@octopusdeploy/step-inputs': 1.0.4
     dev: true
 
-  /@octopusdeploy/step-inputs/1.0.2:
-    resolution: {integrity: sha512-+HTQu5bMVUyv7o62AyQmIBGGwQNyLTwur56rraxjP+R10kSax37sUgAeP6n+KHTEu+AiT8JRM6nri6xiR+Gp7g==}
+  /@octopusdeploy/step-inputs/1.0.3:
+    resolution: {integrity: sha512-9M+9cguM00uAk9xG/XUrgbH1v5qpkIaB7kSCo6g/DLEK0rOdoU7C/iTTjkOigOVkQkMaUSWiSajdzevDH+dU4w==}
     dev: true
 
   /@octopusdeploy/step-inputs/1.0.4:
@@ -1815,10 +1817,10 @@ packages:
       '@octopusdeploy/step-inputs': 1.0.4
     dev: true
 
-  /@octopusdeploy/step-package-build/1.0.2_typescript@4.4.4:
-    resolution: {integrity: sha512-B3P1yjjSF67XZlSS56vb7Losw9ulg9DX3JhouPVgRrPd0treIqennt50rpkffCf4JvXMyO1x7x5wzRCh1kjtCg==}
+  /@octopusdeploy/step-package-build/1.0.4_typescript@4.4.4:
+    resolution: {integrity: sha512-b9gqbLTympZ+6lligoLMEi9/9uAIwSBBhEXAG5H63icPb/NKJBOq4n57M8/K1w3T0I4HPjjdY3exPLrMLJkalA==}
     dependencies:
-      '@octopusdeploy/step-runtime-inputs': 1.0.2
+      '@octopusdeploy/step-runtime-inputs': 1.0.3
       '@rollup/plugin-commonjs': 19.0.2_rollup@2.60.1
       '@rollup/plugin-json': 4.1.0_rollup@2.60.1
       '@rollup/plugin-node-resolve': 13.0.6_rollup@2.60.1
@@ -1835,14 +1837,18 @@ packages:
       - typescript
     dev: true
 
-  /@octopusdeploy/step-package-cli/1.1.1:
-    resolution: {integrity: sha512-9kD4U40Lxm5FbA1Te0VL5p5vPS/nD5Xz/X4m/oJSyowdFXs/CIf+s0B99JHBXzzHF/cBiLjxdC3m4d7zqRrl0A==}
+  /@octopusdeploy/step-package-cli/1.2.4:
+    resolution: {integrity: sha512-P4oaowqVOVwYH6BpIm33C+I/PO1vdALirZ4cvbLp6q2N0WZQtfgVpOtgw44VaThvGC5Jfna5jOYKHcUlwUhmsQ==}
     hasBin: true
     dependencies:
-      '@octopusdeploy/step-package-build': 1.0.2_typescript@4.4.4
+      '@octopusdeploy/step-package-build': 1.0.4_typescript@4.4.4
       archiver: 5.3.0
       commander: 7.2.0
       cross-spawn: 7.0.3
+      form-data: 4.0.0
+      glob: 7.2.0
+      node-fetch: 2.6.6
+      node-stream-zip: 1.15.0
       tslib: 2.3.1
       typescript: 4.4.4
       winston: 3.3.3
@@ -1850,10 +1856,10 @@ packages:
       - supports-color
     dev: true
 
-  /@octopusdeploy/step-runtime-inputs/1.0.2:
-    resolution: {integrity: sha512-7dWUpTn0QrpiZy0DDaPgc8OZzBQ5LFlfCCLJ8AK8P3qfwWpqY21kKj/VQYVij7c7tqLpqyaengXT6jrKR++DyQ==}
+  /@octopusdeploy/step-runtime-inputs/1.0.3:
+    resolution: {integrity: sha512-Uk7YtKbfBYVAo8Fdhth3sRKha/CltXQJvKxDEBg6xqecSUh/t/UaRzDKZ3PIRxL96U27Co1G4hdISy/Cvd9FBg==}
     dependencies:
-      '@octopusdeploy/step-inputs': 1.0.2
+      '@octopusdeploy/step-inputs': 1.0.3
     dev: true
 
   /@octopusdeploy/step-ui/1.2.0:
@@ -3906,6 +3912,15 @@ packages:
       mime-types: 2.1.32
     dev: true
 
+  /form-data/4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+    engines: {node: '>= 6'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.32
+    dev: true
+
   /fragment-cache/0.2.1:
     resolution: {integrity: sha1-QpD60n8T6Jvn8zeZxrxaCr//DRk=}
     engines: {node: '>=0.10.0'}
@@ -5575,6 +5590,13 @@ packages:
     resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
     dev: true
 
+  /node-fetch/2.6.6:
+    resolution: {integrity: sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==}
+    engines: {node: 4.x || >=6.0.0}
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: true
+
   /node-int64/0.4.0:
     resolution: {integrity: sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=}
     dev: true
@@ -5599,6 +5621,11 @@ packages:
 
   /node-releases/1.1.76:
     resolution: {integrity: sha512-9/IECtNr8dXNmPWmFXepT0/7o5eolGesHUa3mtr0KlgnCvnZxwh2qensKL42JJY2vQKC3nIBXetFAqR+PW1CmA==}
+    dev: true
+
+  /node-stream-zip/1.15.0:
+    resolution: {integrity: sha512-LN4fydt9TqhZhThkZIVQnF9cwjU3qmUH9h78Mx/K7d3VvfRqqwthLwJEUOEL0QPZ0XQmNN7be5Ggit5+4dq3Bw==}
+    engines: {node: '>=0.12.0'}
     dev: true
 
   /normalize-package-data/2.5.0:
@@ -6841,6 +6868,10 @@ packages:
       universalify: 0.1.2
     dev: true
 
+  /tr46/0.0.3:
+    resolution: {integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=}
+    dev: true
+
   /tr46/2.1.0:
     resolution: {integrity: sha512-15Ih7phfcdP5YxqiB+iDtLoaTz4Nd35+IiAv0kQ5FNKHzXgdWqPoTIqEDDJmXceQt4JZk6lVPT8lnDlPpGDppw==}
     engines: {node: '>=8'}
@@ -7133,6 +7164,10 @@ packages:
       defaults: 1.0.3
     dev: true
 
+  /webidl-conversions/3.0.1:
+    resolution: {integrity: sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=}
+    dev: true
+
   /webidl-conversions/5.0.0:
     resolution: {integrity: sha512-VlZwKPCkYKxQgeSbH5EyngOmRp7Ww7I9rQLERETtf5ofd9pGeswWiOtogpEO850jziPRarreGxn5QIiTqpb2wA==}
     engines: {node: '>=8'}
@@ -7151,6 +7186,13 @@ packages:
 
   /whatwg-mimetype/2.3.0:
     resolution: {integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==}
+    dev: true
+
+  /whatwg-url/5.0.0:
+    resolution: {integrity: sha1-lmRU6HZUYuN2RNNib2dCzotwll0=}
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
     dev: true
 
   /whatwg-url/8.7.0:

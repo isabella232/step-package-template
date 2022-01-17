@@ -2,10 +2,12 @@
   "name": "hello-world",
   "version": "0.0.0",
   "scripts": {
+    "step-package": "step-package-cli",
     "preinstall": "npx only-allow pnpm",
     "build": "pnpm run build --filter={steps} --filter={targets}",
     "local:publish": "pnpm run local:publish --filter={steps} --filter={targets}",
-    "ci:publish": "pnpm run ci:publish --filter={steps} --filter={targets} && npx changeset tag",
+    "ci:package": "pnpm run ci:package --filter={steps} --filter={targets} && npx changeset tag",
+    "ci:publish": "pnpm run ci:package && pnpm run step-package publish",
     "test": "pnpm run test --filter={steps} --filter={targets}",
     "changeset": "changeset",
     "ci:version": "pnpm run changeset version && pnpm install --frozen-lockfile=false",
@@ -27,7 +29,8 @@
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jest": "24.7.0",
     "eslint-plugin-prefer-arrow": "1.2.3",
-    "eslint-plugin-prettier": "3.4.1"
+    "eslint-plugin-prettier": "3.4.1",
+    "@octopusdeploy/step-package-cli": "1.2.4"
   },
   "description": "",
   "main": "",
