@@ -19,7 +19,6 @@ module.exports = {
     platform: "github",
     repositories: ["OctopusDeploy/step-package-template"],
     packageRules: [],
-    rebaseWhen: "conflicted",
     timezone: "Australia/Brisbane",
     onboarding: false,
     requireConfig: false,

@@ -3,3 +3,4 @@ node_modules/*
 **/dist/**/*
 patches/*
 github/*
+renovate-config.js
